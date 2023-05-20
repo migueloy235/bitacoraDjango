@@ -1,0 +1,70 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {% block title%}
+        <!--titulo de cada pagina-->
+        {%endblock%}
+        sitio web con Django
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <!--que buscas en mi codigo perro-->
+    <header>
+        <div id="logotipo">
+            <!--logo del hotel-->
+            <img src="{% static 'imagenes/logo.png'%}"/>
+            <h1>Krystal Hotel y Resort Cancún</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="{%url 'index'%}">Perfil</a>
+            </li>
+            <li>
+                <a href="{%url 'hola_Mundo'%}">CrearFormulario</a>
+            </li>
+            <li>
+                <a href="{%url 'historial'%}">Historial</a>
+            </li>
+            <li>
+                <a href="{%url 'objeto'%}">objeto</a>
+            </li>
+            <li>
+                <a href="{%url 'articulos'%}">articulos</a>
+            </li>
+           
+        </ul>
+
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+
+
+    <div id="content">
+        <div class="box">
+     
+        {% block content%}
+        <!--contedio del template-->
+        {%endblock%}
+    </div> 
+    </div>
+    <footer>Master en python &copy; blerome</footer>
+
+</body>
+
+
+
+
+</html>
