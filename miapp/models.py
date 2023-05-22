@@ -1,5 +1,5 @@
 from django.db import models
-
+#comentario de que hoy programe
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(max_length=100)
